@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArcadeNexus - Ply. Compete. Have Fun.</title>
+    <meta 
+        name="description"
+        content="ArcadeNexus is a collection of fun browser games you can play antime.">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive">
+    
+    <!--Icon-->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+    <!--Navigation-->
+    <header class="site-header">
+        <nav class="navbar">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">
+                    <i data-lucide="gamepad-2"></i>
+                </span>
+
+                <span class="logo-text">
+                    Arcade<span>Nexus</span>
+                </span>
+            </a>    
+
+            <div class="nav-links">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="pages/games.html" class="nav-link">Games</a>
+                <a href="pages/community.html" class="nav-link">Community</a>
+                <a href="pages/about.html" class="nav-link">About</a>
+            </div>
+            
+            <div class="nav-actions">
+                <a href="pages/games.html" class="nav-play-btn">
+                    Play Now
+                    <i data-lucide="arrow-up-right"></i>
+                </a>
+
+                <button 
+                    class="mobile-menu-btn"
+                    id="mobileMenuBtn"
+                    aria-label="Open menu">
+                <i data-lucide="menu"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+       <!---Mobile Menu-->
+
+       <aside class="mobile-menu" id="mobileMenu">
+        <button 
+            class="mobile-menu-close"
+            id="mobileMenuClose"
+            aria-label="Close menu">
+
+            <i data-lucide="x"></i>
+        </button>
+
+        <div class="mobile-menu-content">
+            <a href="index.html" class="mobile-link">
+                <i data-lucide="home"></i>
+                Home
+            </a>
+
+            <a href="pages/games.html" class="mobile-link">
+                <i data-lucide="gamepad-2"></i>
+                Games
+            </a>
+
+            <a href="pages/community.html" class="mobile-link">
+                <i data-lucide="users"></i>
+                Community
+            </a>
+
+            <a href="pages/about.html" class="mobile-link">
+                <i data-lucide="info"></i>
+                About
+            </a>
+            
+            <a href="pages/games.html" class="mobile-play-btn">
+                Start Playing
+            </a>
+        </div>
+    </aside>
+
+     <main>
+            <!---Heroo-->
+
+            <section class="hero">
+
+                <div class="hero-background"></div>
+                <div class="hero-context">
+                    <div class="hero-badge">
+                        <span class="status-dot"></span>
+                        New games added regularly
+                    </div>
+                    <h1> 
+                        Your Litle corner
+                        <br>
+                        of the <span> Internet Arcade.</span>
+                    </h1>
+                    <p class="hero-description">
+                        Take a break, pick a game, and see how far you can go.
+                        No compilcated setup. Just open a game and start playing.
+                    </p>
+
+                    <div class="hero-buttons">
+                        <a href="pages/games.html" class="primary-btn">
+                            Explore
+                            <i data-lucide="arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </section>
+             </main
+</body>
+</html>
