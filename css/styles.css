@@ -1,0 +1,133 @@
+/*  Arcade Nexus logo */
+
+.logo {
+    display: inline-block;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: #ffffff;
+    flex-shrink: 0;
+}
+
+.logo-image {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    display: block;
+    transition:
+          transform 0.3s ease,
+          filter 0.3s ease;
+}
+
+.logo-text {
+    font-size: 1.25rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    line-height: 1;
+    color: #ffffff;
+}
+
+.logo-text span {
+    background: linear-gradient(
+        90deg,
+        #19d9ff,
+        #7c5cff,
+        #ff3cac
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+  /* ===============================
+    
+          ArcadeNexus- Main CSS
+
+  ==================================*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-main: #05070d;
+    --bg-secondary: #080b13;
+    --bg-card: #0b0f19;
+    --bg-card-hover: #101624;
+
+    --text-main: #f5f7ff;
+    --text-secondary: #a7adbd;
+    --text-muted: #6f7789;
+
+    --blue: #18d8ff;
+    --purple: #7b5cff;
+    --pink: #ff3cac;
+
+    --border: rgba(255, 255, 255, 0.08);
+    --border-light: rgba(255, 255, 255, 0.13);
+
+    --radius-small: 12px;
+    --radius-medium: 18px;
+    --radius-large: 28px;
+
+    --container: 1180px;
+
+    --transition: 0.3s ease;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+
+    background: 
+            radial-gradient(circle at 15% 10%,
+            rgba(24, 216, 255, 0.06),
+            transparent 28%
+            ),
+            radial-gradient(circle at 85% 20%,
+            rgba(123, 92, 255, 0.06),
+            transparent 28%
+            ),
+            var(--bg-main);
+
+            color: var(--text-main);
+
+            font-family: 
+               Inter,
+               -apple-system,
+               BlinkMacSystemFont,
+               "Seoge UI",
+               sans-serif;
+
+               line-height: 1.6;
+               overflow-x: hidden;
+}
+
+  body::selection {
+    background: var(--purple);
+    color: white;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  button,
+  a {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  button {
+    font: inherit;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  section
