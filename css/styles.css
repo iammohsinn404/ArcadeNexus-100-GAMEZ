@@ -1,48 +1,6 @@
-/*  Arcade Nexus logo */
 
-.logo {
-    display: inline-block;
-    align-items: center;
-    gap: 12px;
-    text-decoration: none;
-    color: #ffffff;
-    flex-shrink: 0;
-}
-
-.logo-image {
-    width: 48px;
-    height: 48px;
-    object-fit: contain;
-    display: block;
-    transition:
-          transform 0.3s ease,
-          filter 0.3s ease;
-}
-
-.logo-text {
-    font-size: 1.25rem;
-    font-weight: 800;
-    letter-spacing: -0.5px;
-    line-height: 1;
-    color: #ffffff;
-}
-
-.logo-text span {
-    background: linear-gradient(
-        90deg,
-        #19d9ff,
-        #7c5cff,
-        #ff3cac
-    );
-
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-}
   /* ===============================
-    
-          ArcadeNexus- Main CSS
-
+       ArcadeNexus- Main CSS
   ==================================*/
 * {
     margin: 0;
@@ -173,4 +131,97 @@ body {
 
   .navbar {
     height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30;
   }
+/*  Arcade Nexus logo */
+
+.logo {
+    display: inline-block;
+    align-items: center;
+    gap: 11px;
+    text-decoration: none;
+    color: #ffffff;
+    flex-shrink: 0;
+}
+
+.logo-image {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    display: block;
+    transition:
+          transform var(--transition),
+          filter var(--transition);
+}
+
+.logo:hover .logo-image {
+  transform: scale(1.08) rotate(-2deg);
+
+  filter: 
+        drop-shadow(0 0 7px rgba(24, 216, 255, 0.5))
+        drop-shadow(0 0 14px rgba(255, 60, 172, 0.25))
+}
+
+.logo-text {
+    font-size: 1.25rem;
+    font-weight: 800;
+    letter-spacing: -0.6px;
+    line-height: 1;
+    white-space: nowrap;
+}
+
+.logo-text span {
+    background: linear-gradient(
+        90deg,
+        #19d9ff,
+        #7c5cff,
+        #ff3cac
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/* Desktop Navigation */
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.nav-link {
+  position: relative;
+
+  padding: 9px 14px;
+
+  color: var(--text-secondary);
+
+  font-size: 0.9rem;
+  font-weight: 600;
+
+  border-radius: 10px;
+
+  transition: 
+          color var(--transition,
+          background var(--transition));
+}
+
+.nav-link:hover {
+  color: white;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.nav-link.active  {
+  color: white;
+}
+
+.nav-link.active::after {
+  content: "";
+}
