@@ -412,3 +412,68 @@ body {
 
   font-weight: 750;
 }
+
+/* HEROOO */
+
+.hero {
+  min-height: 760px;
+
+  padding: 170px 20px 110px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  isolation: isolate;
+}
+
+.hero-background {
+  position: absolute;
+  inset: 0;
+
+  z-index: -2;
+
+  background: 
+           radial-gradient(
+            Circle at 50% 20%,
+            rgba(24, 216, 255, 0.11),
+            transparent 35%
+           ),
+           radial-gradient(
+            Circle at 70% 55%,
+            rgba(123, 92, 255, 0.09),
+            transparent 35%
+           ),
+           radial-gradient(
+            Circle at 25% 65%,
+            rgba(255, 60, 172, 0.06),
+            transparent 30%
+           );
+}
+
+.hero::before {
+  content: "";
+
+  position: absolute;
+
+  top: 120px;
+  left: 50%;
+
+  width: 700px;
+  height: 400px;
+
+  transform: translatex(-50%);
+
+  border-radius: 50%;
+
+  background: 
+          linear-gradient(
+                90deg,
+                rgba(24, 216, 255, 0.06),
+                rgba(255, 60, 172, 0.06)
+          );
+
+  filter: blur(90px);
+  
+  z-index: -1;
+}
