@@ -58,7 +58,7 @@ body {
                Inter,
                -apple-system,
                BlinkMacSystemFont,
-               "Seoge UI",
+               "Segeo UI",
                sans-serif;
 
                line-height: 1.6;
@@ -106,7 +106,7 @@ body {
   .community-section,
   .footer-main,
   .footer-bottom{
-    width: min(var(--container), calc(100% - 40 px));
+    width: min(var(--container), calc(100% - 40px));
     margin-inline: auto;
   }
 
@@ -136,12 +136,12 @@ body {
     align-items: center;
     justify-content: space-between;
 
-    gap: 30;
+    gap: 30px;
   }
 /*  Arcade Nexus logo */
 
 .logo {
-    display: inline-block;
+    display: inline-flex;
     align-items: center;
     gap: 11px;
     text-decoration: none;
@@ -209,8 +209,8 @@ body {
   border-radius: 10px;
 
   transition: 
-          color var(--transition,
-          background var(--transition));
+          color var(--transition),
+          background var(--transition);
 }
 
 .nav-link:hover {
@@ -264,7 +264,7 @@ body {
   font-weight: 750;
 
   transition:
-         transfrom var(--transition),
+         transform var(--transition),
          box-shadow var(--transition);
 }
 
@@ -476,4 +476,473 @@ body {
   filter: blur(90px);
   
   z-index: -1;
+}
+
+.hero-content {
+  width: min(900px, 100%);
+
+  text-align: center;
+}
+
+.hero-badge {
+  width: fit-content;
+
+  margin: 0 auto;
+
+  padding: 7px 12px;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  border: 1px solid var(--border);
+  border-radius: 100px;
+
+  background: rgba(255, 255, 255, 0.035);
+
+  color: var(--text-secondary);
+
+  font-size: 0.78rem;
+  font-weight: 600;
+
+  animation: fadeUp 0.7s ease both;
+}
+
+.status-dot {
+  width: 7px;
+  height: 7px;
+
+  border-radius: 56%;
+
+  background: #4cff96;
+
+  box-shadow: 0 0 10px #4cff96;
+}
+
+.hero h1 {
+  max-width: 850px;
+
+  margin: 0 auto;
+
+  font-size: clamp(3.2rem, 7vw, 6.5rem);
+
+  line-height: 0.98;
+
+  letter-spacing: -4px;
+
+  font-weight: 850;
+
+  animation: fade 0.7s 0.08s ease both;
+}
+
+.hero h1 span {
+  background:
+          linear-gradient(
+                90deg,
+                var(--blue),
+                var(--purple) 50%,
+                var(--pink)
+          );
+
+        -webkit-background-clip: text;
+        background-clip: text;
+        
+        color: transparent;
+}
+
+.hero-description {
+  max-width: 620px;
+
+  margin: 20px auto 0;
+
+  color: var(--text-secondary);
+
+  font-size: 1.05rem;
+  line-height: 1.8;
+
+  animation: fadeUp 0.7s 0.16s ease both;
+}
+
+/* Hero Buttons */
+
+.hero-buttons {
+  margin-top: 34px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 12px;
+
+  animation: fadeUp 0.7s 0.24s ease both;
+}
+
+.primary-btn,
+.secondary-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+
+  min-height: 48px;
+
+  padding: 0 20px;
+
+  border-radius: 12px;
+
+  font-size: 0.9rem;
+  font-weight: 750;
+
+  transition:
+         transform var(--transition),
+         box-shadow var(--transition),
+         border-color var(--transition);
+}
+
+.primary-btn {
+  background: white;
+  color: #05070d;
+}
+
+.primary-btn:hover {
+  transform: translateY(-3px);
+
+  box-shadow: 
+         0 12px 30px rgba(255, 255, 255, 0.12);
+}
+
+.primary-btn svg,
+.secondary-btn svg {
+  width: 17px;
+}
+
+.secondary-btn {
+  border: 1px solid var(--border-light);
+
+  background: rgba(255, 255, 255, 0.035);
+
+  color: white;
+}
+
+.secondary-btn:hover {
+  transform: translateY(-3px);
+
+  border-color: rgba(255, 255, 255, 0.35);
+
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.hero-note {
+  margin-top: 22px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+
+  color: var(--text-muted);
+
+  font-size: 0.78rem;
+
+  animation: fadeUp 0.7s 0.32s ease both;
+}
+
+.hero-note svg {
+  width: 14px;
+  color: var(--blue);
+}
+
+/* Hero Decorations */
+
+.hero-decoration {
+  position: absolute;
+
+  width: 130px;
+  height: 130px;
+
+  border: 1px solid rgba(24, 216, 255, 0.08);
+
+  transform: rotate(45deg);
+
+  pointer-events: none;
+}
+
+.decoration-one {
+  top: 30%;
+  left: 5%;
+}
+
+.decoration-two {
+  right: 6%;
+  bottom: 15%;
+
+  border-color: rgba(255, 60, 172, 0.08);
+
+  width: 100px;
+  height: 100px;
+}
+
+/* STATSS */
+
+.stats-section {
+  padding: 0 0 110px;
+}
+
+.stats-container {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 14px;
+}
+
+.stat-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  padding: 20px;
+
+  border: 1px solid var(--border);
+  border-color: var(--radius-medium);
+
+  background: rgba(255, 255, 255, 0.025);
+
+  transition:
+          transform var(--transition),
+          border-color var(--transition),
+          background var(--transition);
+}
+
+.stat-card:hover {
+  transform: translateY(-3px);
+
+  border-color: rgba(24, 216, 255, 0.18);
+
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.stat-icon {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 11px;
+
+  background: 
+         linear-gradient(
+                135deg,
+                rgba(24, 216, 255, 0.1),
+                rgba(123, 92, 255, 0.1)
+         );
+
+         color: var(--blue);
+}
+
+.stat-icon svg {
+  width: 20px;
+}
+
+.stat-card strong {
+  display: block;
+
+  font-size: 1.15rem;
+  line-height: 1.2;
+}
+
+.stat-card span {
+  color: var(--text-muted);
+
+  font-size: 0.75rem;
+}
+
+/* Section Heading */
+
+.games-section,
+.categories-section,
+.features-section,
+.community-section {
+  padding-bottom: 130px;
+}
+
+.section-heading {
+  margin-bottom: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 30px;
+}
+
+.section-heading.centered {
+  display: block;
+
+  text-align: center;
+  max-width: 650px;
+  justify-content: space-between;
+
+  gap: 30px;
+}
+
+.section-label {
+  display: inline-block;
+
+  margin-bottom: 10px;
+
+  color: var(--blue);
+
+  font-size: 0.7rem;
+  font-weight: 800;
+
+  letter-spacing: 2px;
+}
+
+.section-heading h2,
+.features-content h2,
+.community-header h2 {
+  font-size: clamp(2rem, 4vw 3.3rem);
+  
+  line-height: 1.05;
+
+  letter-spacing: -1.8px;
+}
+
+.section-heaading h2 span,
+.features-content h2 span,
+.community-header h2 span {
+  color: var(--text-muted);
+}
+
+.section-heaading p {
+  margin-top: 13px;
+
+  color: var(--text-secondary);
+
+  font-size: 0.92rem;
+}
+
+.view-all-btn,
+.text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+
+  color: white;
+
+  font-size: 0.82rem;
+  font-weight: 700;
+
+  transition:
+        color var(--transition),
+        gap var(--transition);
+
+}
+
+.view-all-btn:hover,
+.text-link:hover {
+  color: var(--blue);
+  gap: 11px;
+}
+
+.view-all-btn svg,
+.text-link svg {
+  width: 15px;
+}
+
+/* Game Grid */
+
+.game-grid {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 16px;
+}
+
+.game-card {
+  overflow: hidden;
+
+  border: 1px solid var(--border);
+  border-radius: var(--radius-medium);
+
+  background: var(--bg-card);
+
+  transition:
+        transform var(--transition),
+        border-color var(--transition),
+        background var(--transition);
+}
+
+.game-card:hover {
+  transform: translateY(-6px);
+
+  border-color: rgba(123, 92, 255, 0.25);
+
+  background: var(--bg-card-hover);
+}
+
+.game-image {
+  position: relative;
+
+  height: 210px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+}
+
+.game-image::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background: 
+        radial-gradient(
+          circle,
+          rgba(255, 255, 255, 0.08),
+          transparent 55%
+        );
+}
+
+.game-Chess {
+  background: 
+        linear-gradient(
+               145deg,
+               #101d38,
+               #28134b
+        );
+}
+
+.game-Ludo {
+  background:
+        linear-gradient(
+              145deg,
+              #0a2430,
+              #14224d
+        );
+}
+
+.game-Tic-Tac-Toe {
+  background: 
+        linear-gradient(
+              145deg,
+              #241034,
+              #111e45
+        );
+}
+
+.game-Car-race {
+  background: 
+        linear-gradient(
+              145deg,
+              #1a3587,
+              #111e45
+        );
 }
