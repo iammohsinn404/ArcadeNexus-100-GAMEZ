@@ -1068,5 +1068,7 @@ body {
 }
 
 .game-play:hover {
+  
   transform: scale(1.08)
+
 }
