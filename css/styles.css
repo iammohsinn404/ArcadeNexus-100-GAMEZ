@@ -1069,6 +1069,80 @@ body {
 
 .game-play:hover {
   
-  transform: scale(1.08)
+  transform: scale(1.08);
+
+  box-shadow: 
+      0 7px 20px
+      rgba(255, 255, 255, 0.15);    
+}
+
+.game-play svg {
+  width: 16px;
 
 }
+
+/* Categories */
+
+.category-grid {
+  display: grid;
+
+  grid-template-columns: 
+      repeat(4, 1fr);
+
+  gap: 13px;
+
+}
+
+.category-card {
+  min-height: 140px;
+
+  padding: 21px;
+
+  display: flex;
+  align-items: flex-start;
+
+  gap: 15px;
+
+  border: 
+      1px solid var(--border);
+  
+  background: 
+         rgba(255, 255, 255, 0.025);
+         
+  transition: 
+           transform var(--transition),
+           border-color var(--transition);
+
+}
+
+.category-card:hover {
+  transform: translateY(-5px);
+
+  border-color: rgba(25, 217, 255, 0.2);
+
+}
+
+.category-card div  {
+  flex: 1;
+
+  margin-top: 38px;
+}
+
+.category-card h3 {
+  font-size: 0.95rem;
+
+} 
+
+.category-card span {
+  display: block;
+
+  margin-top: 3px;
+
+  color: var(--muted);
+
+  font-size: 0.7rem;
+
+}
+
+/* Features */
+
