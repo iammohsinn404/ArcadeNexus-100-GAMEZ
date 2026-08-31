@@ -1146,3 +1146,39 @@ body {
 
 /* Features */
 
+.features-section {
+  display: grid;
+
+  grid-template-columns: 0.9fr 1.1fr;
+
+  gap: 90px;
+
+  padding-top: 20px;
+
+}
+
+.features-content > p {
+  max-width: 450px;
+
+  margin-top: 18px;
+
+  color: var(--text);
+
+  font-size: 0.9rem;
+
+  line-height: 1.8;
+}
+
+.text-link {
+  margin-top: 23px;
+
+  display: inline-flex;
+  align-items: center;
+
+  gap: 7px;
+
+  font-size: 0.8rem;
+  font-weight: 700;
+
+  transition: color var(--t)
+}
